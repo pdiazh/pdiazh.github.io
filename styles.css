@@ -34,13 +34,21 @@ h1 sub:before{
 h1 sub:after{
     content:")";
 }
+section{
+    border-top:2px dashed #eee;
+    padding:50px 0;
+    max-width:800px;
+    margin:0 auto;
+}
 
 .hero{
-    outline:1px solid red;
+    /*/outline:1px #fff;*/
     height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    border:0;
+    padding:0;
 }
 .hero img{
     width:100%;
@@ -50,7 +58,7 @@ h1 sub:after{
 .headshot{
     width:100px;
     height:100px;
-    border-radius:50%;
+    border-radius:100%;
     overflow:hidden;
     margin-left:auto;
     margin-right:auto;
