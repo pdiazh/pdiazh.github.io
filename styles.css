@@ -14,7 +14,7 @@ html, body{
     font-size:18px;
     line-height:30px;
     color:#444;
-    text-shadow:1px 1px 0px #fff; /*(spacing)px (width)px (blurry)px #(color);*/
+    text-shadow:1px 1px 3px #808080; /*(spacing)px (width)px (blurry)px #(color);*/
 }
 body{
     text-align:center;
@@ -23,6 +23,16 @@ h1{
     font-size:36px;
     line-height:50px;
     font-weight:bold;
+}
+h1 sub{
+    color: #aaa;
+    vertical-align:baseline;
+}
+h1 sub:before{
+    content:"(";
+}
+h1 sub:after{
+    content:")";
 }
 img{
     border-radius:50%;
