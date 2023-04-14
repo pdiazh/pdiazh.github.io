@@ -12,8 +12,8 @@
 }
 html, body{
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size:18px;
-    line-height:30px;
+    font-size:15px;
+    line-height:20px;
     color:#444;
     
 }
@@ -21,7 +21,7 @@ body{
     text-align:center;
 }
 h1 {
-    font-size: 36px;
+    font-size: 25px;
     line-height: 50px;
     font-weight: bold;
     text-shadow: 1px 1px 3px #808080; /*(spacing)px (width)px (blurry)px #(color);*/
@@ -52,6 +52,18 @@ section {
     padding: 50px 0;
     max-width: 800px;
     margin: 0 auto;
+}
+section:target h1{
+    animation: flash 1s /*infinite alternate*/;
+}
+@keyframes flash{
+    from{
+        text-shadow: 5px 5px 0px #fd6;
+                     -5px -5px 0px #fd6;
+    }
+    to{
+        text-shadow: 0px 0px 0px #fd6;
+    }
 }
 address{
     white-space:pre-line;/*preserve lines*/
@@ -97,7 +109,7 @@ address{
 
 .list li {
     display:inline;
-    font-weight:bold;
+    font-weight:normal;
 }
 .list li:not(:last-child)after{
     content:", ";
@@ -144,4 +156,25 @@ address{
 .prose li{
     list-style-position:inside;
     list-style-type:square;/*none;disc;etc*/
+}
+
+.nav{
+    width:100%;
+    display:flex;
+    position:fixed;/*fixes nav bar to top of window*/
+}
+.nav li{
+   list-style-type:none;
+   flex-grow:1;/*expands section to take up available space*/
+}
+.nav li a{
+    display:block;
+    line-height:50px;
+    background-color:#eee;
+    color:#666;
+    text-shadow:1px 1px 0px #444;
+    transition:background-color 0.2s;
+}
+.nav li a:hover{
+    background-color:#444;
 }
